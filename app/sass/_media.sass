@@ -1,0 +1,54 @@
+$xlg: 1249px
+$lg: 1100px
+$md: 1000px
+$sm: 700px
+$xs: 420px
+
+@media (max-width: $xlg)
+	body
+		font-size: 14px
+
+	.container
+		width: 100%
+		padding: 0 15px
+
+@media (max-width: $lg)
+	.col-lg-6
+		width: 50%
+
+@media (max-width: $md)
+
+	body
+		font-size: 14px
+
+	.container
+		width: 100%
+		padding: 0 15px
+
+	.header__right
+		display: none
+
+	.hamburger
+		display: block
+
+@media (max-width: $sm)
+
+	.slider__main
+		top: 30%
+		transform: translate(-50%,0)
+
+	.title2
+		font-size: 3.5em
+
+	.title3
+		font-size: 2em
+
+	.col-sm-12
+		width: 100%
+
+
+
+@media (max-width: $md) and (orientation: landscape)
+	body
+		width: 100%
+

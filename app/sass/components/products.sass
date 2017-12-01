@@ -1,0 +1,105 @@
+@import "../vars"
+
+.js-product
+    &.opening
+        float: none !important
+        .product
+            transform: scale(10)
+            background-color: rgba(255, 255, 255, 1)
+            z-index: 3
+
+            .product__header,
+            .product__main
+                opacity: 0
+    &.open
+        float: none !important
+        .product
+                transform: none !important
+
+
+
+.products
+    padding: 64px 0 121px
+    background-image: url(../img/cell.svg)
+    background-repeat: repeat
+    overflow: hidden
+
+    &__item
+        width: 321px
+        margin: 54px auto 0
+
+.product
+    position: relative
+    border-radius: 7px;
+    background-color: rgba(255, 255, 255, 0.75)
+    border: solid 1px #e3e2e2
+    transform: scale(1)
+    transition: all .8s ease
+
+    &__header
+        position: relative
+        padding: 32px 0 21px
+        text-align: center
+
+        &:before
+            content: ''
+            display: block
+            position: absolute
+            top: 0
+            left: -5
+            right: 0
+            bottom: 0
+            width: 100%
+            opacity: 0
+            background-image: url(../img/product-bg.svg)
+            background-repeat: no-repeat
+            background-size: cover
+            transition: opacity .3s ease
+            z-index: 0
+
+    &__hidden
+        display: none
+        position: fixed
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        width: 100%
+        color: #000
+        background-color: #fff
+        z-index: 31
+
+
+    &__title, .pic
+        position: relative
+        z-index: 1
+
+    &__title
+        margin: 20px 0 10px
+        font-size: 1.5em
+        font-weight: bold
+        line-height: 1.5
+        color: #414141
+
+    &__main
+        padding: 24px 35px 32px
+
+    &__txt
+        height: 160px
+        padding-bottom: 32px
+        box-sizing: border-box
+
+    &__btn
+        text-align: center
+
+
+    
+    &:not(.open):hover
+        background-color: #ffffff
+        box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.16), 0 2px 4px 0 rgba(0, 0, 0, 0.05)
+        .product__header:before
+            opacity: 1
+        .btn
+            color: #fff
+            background-color: #f57c3f
+            border: 0

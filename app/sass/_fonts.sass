@@ -1,0 +1,39 @@
+@mixin font-face($font-family, $file-path, $font-weight, $font-style)
+    @font-face
+        font-family: $font-family
+        src: url('#{$file-path}.eot')
+        src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'), url('#{$file-path}.woff2') format('woff2'), url('#{$file-path}.woff') format('woff'), url('#{$file-path}.ttf') format('truetype'), url('#{$file-path}.svg') format('svg')
+        font-weight: $font-weight
+        font-style: $font-style
+
+@include font-face('Icons', '../fonts/icons/fontello', 300, normal)
+@include font-face('Proximanova', '../fonts/proximanova/proximanova-reg', 300, normal)
+@include font-face('Proximanova', '../fonts/proximanova/proximanova-regit', 300, italic)
+@include font-face('Proximanova', '../fonts/proximanova/proximanova-bold', 600, bold)
+@include font-face('Proximanova', '../fonts/proximanova/proximanova-light', 100, lighter)
+
+[class^="icon-"], [class*=" icon-"]
+    font-family: 'Icons' !important
+    speak: none
+    font-style: normal
+    font-weight: normal
+    font-variant: normal
+    text-transform: none
+    line-height: 1
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+
+.icon-check:before
+    content: '\e801'
+.icon-linkedin:before
+    content: '\f05c'
+.icon-twitter:before
+    content: '\f099'
+.icon-facebook:before
+    content: '\f09a'
+.icon-rss:before
+    content: '\f09e'
+.icon-youtube:before
+    content: '\f16a'
+.icon-gplus:before
+    content: '\f30f'

@@ -1,0 +1,400 @@
+@import "vars"
+body,html
+    height: 100%
+    margin: 0
+    padding: 0
+    color: $font-color
+
+body
+    font-family: 'Proximanova', sans-serif
+    font-size: 16px
+    color: #414141
+    line-height: 1.33
+    font-weight: normal
+
+// Base
+
+.clearfix:after
+    content: ''
+    display: table
+    clear: both
+
+.col-4
+    width: 33.3333%
+    float: left
+    box-sizing: border-box
+
+.container
+    max-width: 1249px
+    margin: 0 auto
+    box-sizing: border-box
+
+    &_r
+        position: relative
+        z-index: 1
+
+.title
+    margin: 0
+    padding: 0
+    line-height: 1
+
+    &2
+        font-size: 4.500em
+        color: #3b9988
+
+    &3
+        line-height: 1.2
+        font-size: 2.250em
+        color: rgba(0, 0, 0, 0.87)
+
+    &4
+        font-weight: lighter
+        font-size: 3em
+        color: rgba(0, 0, 0, 0.54)
+
+.link
+    text-decoration: none
+    color: $font-color
+
+.list
+    margin: 0
+    padding: 0
+    list-style: none
+
+.btn
+    display: inline-block
+    padding: 10px 25px
+    color: #fff
+    font-size: 1em
+    font-weight: bold
+    border-radius: 24px
+    text-transform: uppercase
+    text-decoration: none
+    vertical-align: middle
+    box-sizing: border-box
+    transition: all .3s ease
+    line-height: 22px
+    letter-spacing: 1px
+    border: 0
+    background-color: #3b9988
+
+    &_main:hover
+        background-color: darken(#3b9988, 10%)
+
+    &_accent
+        padding: 13px 25px
+        letter-spacing: 0.5px
+        background-color: #f57c3f
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.16)
+
+        &:hover
+            background-color: darken(#f57c3f, 10%)
+
+    &_green
+        border: solid 1px #3b9988
+        background-color: #fff
+        color: #3b9988
+
+    &_blue
+        padding: 13px 25px
+        letter-spacing: 0.5px
+        background-color: #45b9f3
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.16)
+
+        &:hover
+            background-color: darken(#45b9f3, 10%)
+        
+
+
+
+.header
+    min-height: 100vh
+
+    &__container
+        padding-top: 25px
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 120px
+        overflow: hidden
+
+
+    &__left
+        float: left
+
+    &__right
+        padding-top: 15px
+        float: right
+
+    &__btns
+        vertical-align: top
+        display: inline-block
+
+        .btn
+            margin-left: 16px
+
+    &__bottom
+        height: 120px
+        padding-top: 18px
+        position: absolute
+        bottom: 0
+        left: 0
+        right: 0
+        text-align: center
+        background-color: #f9f9fa
+        box-sizing: border-box
+
+.nav
+    padding-top: 10px
+    display: inline-block
+
+    &__item
+        position: relative
+        display: inline-block
+        margin: 0 16px
+        padding-bottom: 10px
+        line-height: 24px
+        font-size: 1.250em
+        vertical-align: middle
+        box-sizing: border-box
+
+        &:after
+            content: ''
+            display: block
+            width: 0
+            height: 2px
+            background-color: #757471
+            position: absolute
+            bottom: 0
+            left: 50%
+            right: 0
+            transition: all .3s ease
+
+        &:hover
+            &:after
+                width: 100%
+                left: 0
+            .nav__link
+                color: rgba(0, 0, 0, 0.87)
+
+    &__link
+        color: rgba(0, 0, 0, 0.54)
+        transition: color .3s ease
+        
+
+
+
+// Hamburger
+
+.hamburger
+    display: none
+    float: right
+    margin: 10px 15px 0 0
+    width: 24px
+    height: 16px
+    position: relative
+    transform: rotate(0deg)
+    transition: .5s ease-in-out
+    cursor: pointer
+    z-index: 444
+
+    &__line
+        display: block
+        position: absolute
+        height: 2px
+        width: 100%
+        background: rgba(0, 0, 0, 0.97)
+        border-radius: 9px
+        opacity: 1
+        left: 0
+        transform: rotate(0deg)
+        transition: .25s ease-in-out
+
+        &:nth-child(1)
+            top: 0px
+
+        &:nth-child(2), &:nth-child(3)
+            top: 7px
+
+        &:nth-child(4)
+            top: 14px
+
+// Mobile
+
+#menu-desktop 
+    
+    &.open
+        display: block
+        position: fixed
+        overflow-x: auto
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        padding: 25px 15px 46px
+        background-color: rgba(255,255,255, .9)
+        box-sizing: border-box
+        z-index: 333
+
+        .nav
+            display: block
+
+        .nav__link, .header__btns
+            display: block
+            margin: 0
+            margin: 15px 0
+
+        .nav__link 
+            font-size: 1.5em
+
+        .nav 
+            width: 100%
+            margin-top: 15px
+            text-align: center
+            &__item
+                display: block
+
+        .header__right
+            display: block
+            width: 100%
+            text-align: center
+            float: none
+
+            &:before
+                content: ''
+                display: block
+                width: 100%
+                clear: both
+        .btn
+            margin: 0
+
+        .hamburger__line
+
+            &:nth-child(1)
+                top: 18px
+                width: 0%
+                left: 50%
+
+            &:nth-child(2)
+                transform: rotate(45deg)
+
+            &:nth-child(3)
+                transform: rotate(-45deg)
+
+            &:nth-child(4)
+                top: 18px
+                width: 0%
+                left: 50%
+
+// Modal
+
+.modal
+    display: none
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    width: 100%
+    overflow-x: hidden
+    overflow-y: auto
+    background-color: rgba(0,0,0, .75)
+    z-index: 999
+
+    &__inner
+        margin-bottom: 50px
+        position: absolute
+        top: 100px
+        left: 50%
+        width: 50%
+        max-width: 600px
+        transform: translateX(-50%)
+        background-color: #fff
+        border-radius: 5px
+
+    &__header
+        position: relative
+        padding: 20px 25px 0
+        text-align: center
+
+    &__close
+        position: absolute
+        top: 0px
+        right: 0px
+        font-size: 2em
+        color: #a1a1a1
+        font-weight: 500
+        cursor: pointer
+        outline: none
+        outline-style: none
+
+    &__content
+        padding: 10px 24px 24px
+
+        .p
+            font-family: Avenir-Book, sans-serif
+            color: rgba(0,0,0,.54)
+
+    &__title
+        text-transform: inherit
+        font-size: 1.2em
+        text-align: left
+        margin-bottom: 0
+
+.form
+
+    &__field
+        position: relative
+        margin-bottom: 10px
+        padding-top: 20px
+
+    &__lbl
+        display: block
+        position: absolute
+        top: 15px
+        left: 0
+        color: #989898
+        transition: all .3s ease
+
+        &.active
+            top: 0
+            font-size: .8em
+            color: rgba(47, 42, 42, 0.87)
+
+    &__input
+        font-family: Avenir, sans-serif
+        width: 100%
+        border: none
+        border-bottom: 1px solid #5cb3fd
+        border-radius: 5px
+        font-size: 1em
+
+        &:focus
+            outline: none
+            border-color: #5cb3fd
+
+    &__submit
+        font-family: Avenir,sans-serif
+        border: none
+        cursor: pointer
+        line-height: normal
+
+.modal__btn
+    padding-top: 15px
+
+input[type='submit']
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
+
+#form-succes
+
+    .modal__inner
+        top: 50%
+        transform: translate(-50%, -50%)
+
+    .modal__content
+        text-align: center
+        color: #7ed321
+        font-size: 1.2em

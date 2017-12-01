@@ -1,0 +1,37 @@
+@import "../vars"
+
+.answers
+    position: relative
+    padding: 64px 0 176px
+    background-image: linear-gradient(to bottom, #fdfdfd, #fafafa)
+    box-shadow: inset 0px 2px 32px 0px rgba(0,0,0,0.08)
+    &:before
+        content: ''
+        display: block
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        width: 100%
+        background-image: url(../img/answer-bg.svg)
+        background-repeat: no-repeat
+        background-position: bottom right
+
+.answer
+    &__list
+        padding-top: 37px
+
+    &__item
+        margin-top: 47px
+
+    &__title
+        padding-left: 16px
+        border-left: 2px solid #49a090
+        font-size: 1.375em
+        color: rgba(0, 0, 0, 0.87)
+    &__txt
+        padding-top: 12px
+        padding-left: 16px
+        border-left: 2px solid #cee4e0
+        padding-left: 16px

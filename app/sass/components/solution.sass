@@ -1,0 +1,39 @@
+@import "../vars"
+
+.solution
+    padding: 76px 0 134px
+    background-color: #fafafa
+
+    &__list
+        display: block
+        width: 63%
+        margin: 63px auto
+
+    &__item
+        position: relative
+        padding: 32px
+        border-bottom: 2px solid #efefef
+        &:last-child
+            border-bottom: none
+
+    &__left
+        min-width: 150px
+        min-height: 100px
+        float: left
+        padding-right: 32px
+        box-sizing: border-box
+
+    &__title
+        margin: 8px 0
+        font-size: 1.5em
+        font-weight: bold
+        color: rgba(0, 0, 0, 0.87)
+
+    &__txt
+        color: rgba(0, 0, 0, 0.54)
+
+    &__pic
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        

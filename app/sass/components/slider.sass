@@ -1,0 +1,126 @@
+@import "../vars"
+
+.slider
+    &-wrap
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+
+    &__main
+        position: absolute
+        width: 55%
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        text-align: center
+        z-index: -1
+
+    &__item
+        opacity: 0
+        transition: opacity .6s ease
+        &.active
+            opacity: 1
+
+            .slider__main
+                z-index: 1
+
+    .title2
+        margin-bottom: 20px
+
+    &__btn
+        margin-top: 50px
+        .btn
+            margin: 0 5px
+
+    &__nav
+        display: inline-block
+        line-height: 0
+        padding: 6px 0
+        position: absolute
+        left: 50%
+        transform: translateX(-50%)
+        bottom: 30px
+        border-radius: 10.5px
+        background-color: rgba(0, 0, 0, 0.5)
+        box-sizing: border-box
+
+        .circle
+            margin: 0 7px
+            display: inline-block
+            width: 8px
+            height: 8px
+            line-height: 1
+            border-radius: 50%
+            background-color: rgba(255, 255, 255, 0.5)
+            cursor: pointer
+            transition: all .3s ease
+            &:nth-child(2)
+                margin: 0 5px
+
+            &:hover, &.active
+                background-color: #fff
+
+
+.looper
+    position: absolute
+    transition: all 1s ease
+    // animation: a-slider 6s infinite
+
+    &-left
+        left: -2000px
+
+    &-right
+        right: -2000px
+
+    &1.active
+        left: 10px
+        bottom: -200px
+
+    &2.active
+        right: -20px
+        bottom: -300px
+
+    &3.active
+        left: 200px
+        bottom: -420px
+        transition-delay: .5s
+
+    &4.active
+        right: 300px
+        bottom: -420px
+        transition-delay: .4s
+
+    &5.active
+        left: -200px
+        bottom: 30px
+        transition-delay: .2s
+
+    &6
+        left: 50%
+        transform: translateX(-50%)
+        bottom: -200px
+
+    &7
+        left: 50%
+        transform: translateX(-50%)
+        bottom: -100px
+
+.header__container
+    &.bg1
+        background-image: radial-gradient(circle at 50% 7%, #ffffff, #fff8e7)
+    &.bg2
+        background-image: radial-gradient(circle at 50% 7%, #ffffff, #ffefef)
+    &.bg3
+        background-image: radial-gradient(circle at 50% 7%, #ffffff, #f0faff)
+
+// @keyframes a-slider
+//     0%
+//         transform: translateY(0)
+//     40%
+//         transform: translateY(-10%)
+//     80%
+//         transform: translateY(10%)
+//     100%
+//         transform: translateY(0)

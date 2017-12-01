@@ -1,0 +1,78 @@
+@import "../vars"
+
+.advantages
+    padding: 76px 0 16px
+    background-image: url(../img/advantages-bg.svg)
+    background-repeat: no-repeat
+    background-size: cover
+    box-shadow: inset 3px -6px 14px 0px rgba(0,0,0,0.04)
+
+    .title
+        margin-bottom: 22px
+
+    .col-4
+        text-align: center
+
+.advantage
+    display: inline-block
+    position: relative
+    margin: 48px 0 0 32px
+    padding: 24px 24px 24px 47px
+    width: 321px
+    text-align: left
+    border-radius: 7px
+    background-color: #ffffff
+    box-sizing: border-box
+    background-color: rgba(255, 255, 255, 0.65)
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16)
+    transition: all .3s ease
+
+    .pic
+        display: inline-block
+        position: absolute
+        top: 50%
+        left: 50%
+        margin-top: -11px
+        margin-left: -12px
+        opacity: 0
+        transition: all .3s ease
+
+    .digit
+        opacity: 1
+        transition: all .3s ease
+
+    &:hover
+        background-color: #ffffff
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.16), 0 2px 4px 0 rgba(0, 0, 0, 0.16)
+        .digit
+            opacity: 0
+        .pic
+            opacity: 1
+
+    &__title
+        margin-bottom: 10px
+        font-size: 1.5em
+        color: #414141
+        line-height: 0.83
+
+    &__figure
+        position: absolute
+        top: 50%
+        left: -32px
+        margin-top: -32px
+        width: 64px
+        height: 64px
+        line-height: 64px
+        font-size: 2.250em
+        font-weight: 600
+        letter-spacing: -0.9px
+        color: #9b9b9b
+        text-align: center
+        vertical-align: middle
+        border-radius: 50%
+        background-color: #ffffff
+        border: solid 1px #a0a7af
+
+    &__footer
+        margin-top: 116px
+        font-size: 0.813em
