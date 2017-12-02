@@ -101,28 +101,32 @@
         // modal
 
         $('.modal_link').click(function() {
-            $('#form-modal').fadeIn();
+            $('#form-modal').show();
+            setTimeout(function() {
+                $('#form-modal').addClass('show')
+            },100);
             $('#menu-desktop').removeClass('open');
             return false;
         });
 
         $('.details_link').click(function() {
-            var parent = $(this).parents('.js-product');
-            parent
-                .addClass('opening')
+            $(this)
+                .parents('.product')
                 .find('.product__hidden')
-                .fadeIn();
-            setTimeout(function() {
-                 parent
-                    .addClass('open')
-                    .removeClass('opening');
-            },800);
-            $('#menu-desktop').removeClass('open');
+                .fadeIn()
+                .addClass("open");
             return false;
         });
 
+        $('.hidden__close').click(function() {
+            $('.product__hidden').removeClass('open');
+        });
+
         $('.modal__close').click(function() {
-            $('.modal').fadeOut();
+            $('.modal').removeClass('show');
+            setTimeout(function() {
+                $('.modal').hide();
+            },100);
         });
 
         $('.form__input').on('focus', function() {
@@ -169,14 +173,24 @@
 
     $(window).on("scroll",function(){
         var client = $(window).scrollTop();
-        if (client > 20 && client < $('.header__container').height()) {
-            $('.looper1').css({"bottom" : ( .13 * $(window).scrollTop() ) - 200, "transition-delay": "0s", "transition": "none" });
-            $('.looper2').css({"bottom" : ( .27 * $(window).scrollTop() ) - 300, "transition-delay": "0s", "transition": "none" });
-            $('.looper3').css({"bottom" : ( .39 * $(window).scrollTop() ) - 420, "transition-delay": "0s", "transition": "none" });
-            $('.looper4').css({"bottom" : ( .20 * $(window).scrollTop() ) - 420, "transition-delay": "0s", "transition": "none" });
-            $('.looper5').css({"bottom" : ( .12 * $(window).scrollTop() ) + 30, "transition-delay": "0s", "transition": "none" });
-            $('.looper6').css({"bottom" : ( .2 * $(window).scrollTop() ) - 200, "transition-delay": "0s", "transition": "none" });
-            $('.looper7').css({"bottom" : ( .2 * $(window).scrollTop() ) - 100, "transition-delay": "0s", "transition": "none" });
+        var header = $('.js-header').height();
+        var helper = true;
+        if(helper && client > header) {
+            $('#menu-desktop').addClass('fixed');
+            helper = false;
+        }
+        if(client <= header) {
+            $('#menu-desktop').removeClass('fixed');
+            helper = true;
+        }
+        if (client > 20 && client < header) {
+            $('.looper1').css({"bottom" : ( 0.13 * $(window).scrollTop() ) - 200, "transition-delay": "0s", "transition": "none" });
+            $('.looper2').css({"bottom" : ( 0.27 * $(window).scrollTop() ) - 300, "transition-delay": "0s", "transition": "none" });
+            $('.looper3').css({"bottom" : ( 0.39 * $(window).scrollTop() ) - 420, "transition-delay": "0s", "transition": "none" });
+            $('.looper4').css({"bottom" : ( 0.20 * $(window).scrollTop() ) - 420, "transition-delay": "0s", "transition": "none" });
+            $('.looper5').css({"bottom" : ( 0.12 * $(window).scrollTop() ) + 30, "transition-delay": "0s", "transition": "none" });
+            $('.looper6').css({"bottom" : ( 0.2 * $(window).scrollTop() ) - 200, "transition-delay": "0s", "transition": "none" });
+            $('.looper7').css({"bottom" : ( 0.2 * $(window).scrollTop() ) - 100, "transition-delay": "0s", "transition": "none" });
         } else {
             $('.looper').css({"transition": "none"});
         }

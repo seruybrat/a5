@@ -36,4 +36,23 @@
         position: absolute
         top: 50%
         transform: translateY(-50%)
-        
+
+$xlg: 1249px
+$lg: 1100px
+$md: 1000px
+$sm: 700px
+$xs: 420px
+
+@media (max-width: $md)
+    .solution__list
+        width: 85%
+
+@media (max-width: $sm)
+    .solution__left
+        min-height: 0
+        padding-right: 0
+        float: none
+        text-align: center
+    .solution__pic
+        position: static
+        transform: none

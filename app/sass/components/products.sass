@@ -1,31 +1,12 @@
 @import "../vars"
 
-.js-product
-    &.opening
-        float: none !important
-        .product
-            transform: scale(10)
-            background-color: rgba(255, 255, 255, 1)
-            z-index: 3
-
-            .product__header,
-            .product__main
-                opacity: 0
-    &.open
-        float: none !important
-        .product
-                transform: none !important
-
-
-
 .products
     padding: 64px 0 121px
     background-image: url(../img/cell.svg)
     background-repeat: repeat
-    overflow: hidden
 
     &__item
-        width: 321px
+        width: 78%
         margin: 54px auto 0
 
 .product
@@ -33,7 +14,6 @@
     border-radius: 7px;
     background-color: rgba(255, 255, 255, 0.75)
     border: solid 1px #e3e2e2
-    transform: scale(1)
     transition: all .8s ease
 
     &__header
@@ -58,16 +38,42 @@
             z-index: 0
 
     &__hidden
-        display: none
         position: fixed
         top: 0
         left: 0
         right: 0
         bottom: 0
+        height: 100%
         width: 100%
+        overflow-y: auto
+        padding: 50px 0
         color: #000
         background-color: #fff
+        transform: scale(0)
+        box-sizing: border-box
         z-index: 31
+        transition: all .6s ease-in-out
+        &.bg1
+            background-image: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(240, 250, 255, 1))
+        &.bg2
+            background-image: linear-gradient(to top, rgba(255, 255, 255, 0.98), #ffe6e6)
+        &.bg3
+            background-image: linear-gradient(to top, rgba(255, 255, 255, 0.98), #fff8e7)
+        &:before
+            content: ''
+            display: block
+            position: absolute
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0
+            width: 100%
+            background-image: url('../img/detail-bg.svg')
+            background-repeat: no-repeat
+            background-position: bottom right
+            z-index: -1
+        &.open
+            transform: scale(1)
 
 
     &__title, .pic
@@ -99,7 +105,106 @@
         box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.16), 0 2px 4px 0 rgba(0, 0, 0, 0.05)
         .product__header:before
             opacity: 1
-        .btn
+        .details_link
             color: #fff
             background-color: #f57c3f
             border: 0
+
+.hidden
+    &__close
+        position: absolute
+        top: 16px
+        right: 18px
+        width: 39px
+        height: 39px
+        text-align: center
+        padding-top: 3px
+        border-radius: 50%
+        border: solid 1px rgba(0, 0, 0, 0.24)
+        box-sizing: border-box
+        cursor: pointer
+    &__pic
+        width: 117px
+        margin-right: 15px
+        float: left
+    &__el
+        margin-top: 15px
+        display: inline-block
+        border-radius: 3px 8px 0 3px
+        background-color: #3b9988
+        padding: 1px 4px
+        color: #fff
+        font-weight: bold
+    &__t
+        margin-top: 1px
+        font-size: 1.750em
+        font-weight: bold
+    &__title
+        margin: 24px 0 48px
+        color: #3b9988
+        font-size: 1.500em
+    &__sub-t
+        margin-bottom: 16px
+        font-size: 1.500em
+        line-height: 24px
+    &__txt
+        margin: 0
+        padding: 0
+        margin-bottom: 30px
+        font-size: 0.875em
+        line-height: 1.43
+        color: rgba(0, 0, 0, 0.64)
+    &__item
+        position: relative
+        padding-left: 15px
+        margin-bottom: 10px
+        font-size: 0.875em
+        line-height: 1.43
+        color: rgba(0, 0, 0, 0.64)
+        &:before
+            content: ''
+            display: block
+            position: absolute
+            top: 7px
+            left: 0
+            width: 5px
+            height: 5px
+            border-radius: 50%
+            background-color: #f57c3f
+
+    &__btn
+        margin: 25px 0
+    &__else
+        font-size: 0.875em
+        color: rgba(0, 0, 0, 0.64)
+        padding-bottom: 15px
+
+    &__left
+        width: 41.6666%
+        padding-right: 55px
+        float: left
+        border-right: 1px solid #d8d8d8
+        box-sizing: border-box
+    &__right
+        width: 58.3333%
+        padding-left: 55px
+        float: left
+        box-sizing: border-box
+
+$xlg: 1249px
+$lg: 1100px
+$md: 1000px
+$sm: 700px
+$xs: 420px
+
+@media (max-width: $md)
+   .hidden
+        &__left
+            padding: 0 0 30px
+            width: 100%
+            float: none
+            border: none
+        &__right
+            padding: 0 0 30px
+            width: 100%
+            float: none

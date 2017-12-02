@@ -1,5 +1,27 @@
 @import "../vars"
 
+.header-news
+    position: relative
+    background-image: radial-gradient(circle at 50% 7%, #ffffff, #d3f3ed)
+    height: 586px
+    &:before
+        content: ''
+        display: block
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        width: 100%
+        background-image: url('../img/news-bg.svg')
+        background-repeat: no-repeat
+        background-position: bottom center
+    #menu-desktop
+        padding-top: 24px
+
+.article
+    #menu-desktop
+        padding-top: 24px
 .news
     padding: 64px 0 150px
     background-color: #ffffff
@@ -12,26 +34,24 @@
         font-weight: bold
         color: rgba(0, 0, 0, 0.54)
         text-transform: uppercase
+    .col-left
+        text-align: left
+    .col-center
+        text-align: center
+    .col-right
+        text-align: right
 
 
 .new
     display: inline-block
     overflow: hidden
-    width: 370px
+    width: 89%
     margin-top: 64px
     border-radius: 7px
+    text-align: left
     background-color: rgba(255, 255, 255, 0.75)
     box-sizing: border-box
     transition: all .3s ease
-
-    &_left
-        text-align: left
-
-    &_center
-        text-align: center
-
-    &_right
-        text-align: right
 
     &:hover
         box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.16)
@@ -45,7 +65,7 @@
     &__pic
         display: block
         width: 100%
-        height: 230px
+        height: auto
 
     &__title
         font-weight: bold
@@ -59,3 +79,94 @@
     &__date
         font-weight: bold
         color: rgba(0, 0, 0, 0.36)
+
+.article
+    &__top
+        position: relative
+        overflow: hidden
+        background-repeat: no-repeat
+        background-position: top center
+        background-size: cover
+    &__overlay
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        width: 100%
+        background-color: rgba(0, 0, 0, 0.4)
+    &__inner
+        position: relative
+        padding: 140px 0 160px
+        z-index: 1
+    &__date
+        display: inline-block
+        padding: 3px 7px 3px 9px
+        margin-bottom: 5px
+        border-radius: 13px
+        background-color: rgba(255, 255, 255, 0.75)
+        font-size: 1.125em
+        font-weight: 600
+        color: rgba(0, 0, 0, 0.87)
+        line-height: 1
+    &__title
+        margin: 15px 0 30px
+        font-size: 2.625em
+        width: 100%
+        line-height: 1.4
+        width: 60%
+        font-weight: 600
+        color: #fff
+        line-height: 1.2
+
+.single-post-wrap.container
+    padding-bottom: 100px
+
+.single-post
+    padding-right: 8.333%
+    .entry-title
+        font-weight: 300
+        font-size: 2em
+.entry-title
+    margin: 48px 0 19px
+.entry-content
+    font-size: 1.125em
+    line-height: 25px
+    color: rgba(0, 0, 0, 0.64)
+.posts__item
+    display: block
+    padding: 25px
+    margin-bottom: 16px
+    border-radius: 7px
+    background-color: rgba(255, 255, 255, 0.75)
+    border: solid 1px #e3e2e2
+
+.btn_article
+    font-size: 1.4em
+    padding: 10px 15px
+    margin-right: 20px
+    border-radius: 3px
+    &:first-child
+        color: rgba(0, 0, 0, 0.87)
+        background-color: #fff
+    &:nth-child(2)
+        color: #fff
+        background-color: #5999e5
+    &:nth-child(3)
+        color: #fff
+        background-color: #006699
+
+$xlg: 1249px
+$lg: 1100px
+$md: 1000px
+$sm: 700px
+$xs: 420px
+
+@media (max-width: $lg)
+    .news
+        .col-left
+            text-align: center
+        .col-center
+            text-align: center
+        .col-right
+            text-align: center

@@ -22,73 +22,75 @@
 <div class="top-wrapper">
 
     <header class="header">
-        <div class="header__container bg1">
-            <div id="menu-desktop" class="container clearfix container_r">
-                <div class="hamburger">
-                    <span class="hamburger__line"></span>
-                    <span class="hamburger__line"></span>
-                    <span class="hamburger__line"></span>
-                    <span class="hamburger__line"></span>
-                </div>
-
-                <a class="header__left header__logo" href="index.html">
-                    <img src="img/logo.svg" alt="LOGO">
-                </a>
-
-                <div class="header__right">
-
-                     <nav class="nav">
-                        <ul class="list nav__list">
-                            <li class="nav__item">
-                                <a href="" class="link nav__link">
-                                    Про нас
-                                </a>
-                            </li>
-                            <li class="nav__item">
-                                <a href="#advantages" class="link nav__link scroll_link">
-                                    Переваги
-                                </a>
-                            </li>
-                            <li class="nav__item">
-                                <a href="#products" class="link nav__link scroll_link">
-                                    Продукти
-                                </a>
-                            </li>
-                            <li class="nav__item">
-                                <a href="#solution" class="link nav__link scroll_link">
-                                    Рішення
-                                </a>
-                            </li>
-                            <li class="nav__item">
-                                <a href="" class="link nav__link ">
-                                    Клієнти
-                                </a>
-                            </li>
-                            <li class="nav__item">
-                                <a href="#news" class="link nav__link scroll_link">
-                                    Новини
-                                </a>
-                            </li>
-                            <li class="nav__item">
-                                <a href="#contacts" class="link nav__link scroll_link">
-                                    Контакти
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-
-                    <div class="header__btns">
-                        <a href="" class="btn btn_main">Партнерам</a>
+        <div class="header__container bg1 js-header">
+            <div id="menu-desktop">
+                <div class="container clearfix container_r">
+                    <div class="hamburger">
+                        <span class="hamburger__line"></span>
+                        <span class="hamburger__line"></span>
+                        <span class="hamburger__line"></span>
+                        <span class="hamburger__line"></span>
                     </div>
 
+                    <a class="header__left header__logo" href="index.html">
+                        <img src="img/logo.svg" alt="LOGO">
+                    </a>
+
+                    <div class="header__right">
+
+                         <nav class="nav">
+                            <ul class="list nav__list">
+                                <li class="nav__item">
+                                    <a href="article.html" class="link nav__link">
+                                        Про нас
+                                    </a>
+                                </li>
+                                <li class="nav__item">
+                                    <a href="#advantages" class="link nav__link scroll_link">
+                                        Переваги
+                                    </a>
+                                </li>
+                                <li class="nav__item">
+                                    <a href="#products" class="link nav__link scroll_link">
+                                        Продукти
+                                    </a>
+                                </li>
+                                <li class="nav__item">
+                                    <a href="#solution" class="link nav__link scroll_link">
+                                        Рішення
+                                    </a>
+                                </li>
+                                <li class="nav__item">
+                                    <a href="" class="link nav__link ">
+                                        Клієнти
+                                    </a>
+                                </li>
+                                <li class="nav__item">
+                                    <a href="news.html" class="link nav__link scroll_link">
+                                        Новини
+                                    </a>
+                                </li>
+                                <li class="nav__item">
+                                    <a href="#contacts" class="link nav__link scroll_link">
+                                        Контакти
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                        <div class="header__btns">
+                            <a href="" class="btn btn_main">Партнерам</a>
+                        </div>
+
+                    </div>
                 </div>
             </div>
 
             <!-- slider -->
 
-            <div class="slider-wrap container"> 
+            <div class="slider-wrap"> 
             
-                <div class="slider">
+                <div class="slider container">
 
                     <!-- slider-item1 -->
 
@@ -141,8 +143,9 @@
                         </div>
 
                         <div class="slider__main">
-                            <h2 class="title title2">Экспертиза</h2>
-                            <h3 class="title title3">Baker Tilly</h3>
+                            <h2 class="title title2">Найкраща світова експертиза</h2>
+                            <h3 class="title title5">Найкраща світова експертиза у вітчизняному продукті А5 Бухгалтерія. 
+                            Створено у співпраці з Baker Tilly, що входить до ТОП-10 світових лідерів консалтингових компаній у сфері обліку та аудиту.</h3>
                             <div class="slider__btn">
                                 <a href="#3" class="btn btn_accent">Переглянути</a>
                             </div>
@@ -210,7 +213,7 @@
 
         <div class="clearfix">
 
-            <div class="js-product col-4 col-lg-6 col-sm-12">
+            <div class="col-4 col-lg-6 col-sm-12">
                 <div class="products__item product">
                     <div class="product__header">
                         <img class="pic" src="img/logo.svg" alt="">
@@ -229,11 +232,84 @@
                         <div class="product__btn">
                             <a href="" class="btn btn_green details_link">Детальніше</a>
                         </div>
-                        <div class="product__hidden">
-                            Автоматизація основних процесів ведення бізнесу для підприємств з оборотом від 100 млн грн: 
-                            Автоматизація основних процесів ведення бізнесу для підприємств з оборотом від 100 млн грн: 
-                            Автоматизація основних процесів ведення бізнесу для підприємств з оборотом від 100 млн грн: 
+                        <!-- hidden -->
+                        <div class="product__hidden bg1">
+                            <div class="container">
+                                <div class="hidden__close">
+                                    <img src="img/close.svg" alt="">
+                                </div>
+                                <div class="hidden__header clearfix">
+                                    <img src="img/logo.svg" class="hidden__pic" alt="">
+                                    <div class="hidden__el">Бухгалтерія</div>
+                                    <div class="hidden__t">Бізнес</div>
+
+                                </div>
+                                <div class="hidden__title">
+                                    Рішення для автоматизація основних процесів ведення<br> бізнесу для підприємств з оборотом від 100 млн грн.
+                                </div>
+                                <div class="clearfix">
+                                    <div class="hidden__left">
+                                        <div class="hidden__sub-t">
+                                            Загальний опис
+                                        </div>
+                                        <p class="hidden__txt">
+                                            <b>Система призначена</b> для комплексної автоматизації всіх розділів бухгалтерського та податкового обліку, оперативного обліку, управлінського обліку, аналізу та контролю фінансової діяльності підприємства; формування звітності у відповідності до законодавства, національних та міжнародних стандартів обліку; автоматизації процесів обліку персоналу, табельного обліку, розрахунку заробітної плати. 
+                                        </p>
+                                        <p class="hidden__txt">
+                                            <b>В cистемі реалізовано</b> концепцію ведення бухгалтерського, фінансового та управлінського обліку, що дозволяє одночасно отримувати повну оперативну інформацію з усіх аспектів господарської та фінансової діяльності підприємства та використовувати її для прийняття ефективних управлінських рішень.
+                                        </p>
+                                        <a href="" class="btn btn_sin hidden__btn">Спробувати демо версію</a>
+
+                                        <div class="hidden__else">
+                                            Дивитись інші продукти:<br>
+                                            <b>А5 Бюджет,</b> А5 Мікробізнес
+                                        </div>
+
+                                    </div>
+                                    <div class="hidden__right">
+                                        <div class="hidden__sub-t">
+                                            Система надає користувачам можливості:
+                                        </div>
+                                        <ul class="list hidden__list">
+                                            <li class="hidden__item">
+                                                Внесення необхідної інформації користувачами Системи відповідно до наданих прав доступу в усіх підрозділах підприємства;
+                                            </li>
+                                            <li class="hidden__item">
+                                                Сумісного користування інформацією у різних робочих процесах;
+                                            </li>
+                                             <li class="hidden__item">
+                                                Надання захисту та гарантії збереження корпоративної інформації та широкі можливості керування доступу до неї;
+                                            </li>
+                                             <li class="hidden__item">
+                                                Iнтеграції з іншими інформаційними системами підприємства;
+                                            </li>
+                                             <li class="hidden__item">
+                                                Перелельного ведення податкового та бухгалтерського обліку;
+                                            </li>
+                                             <li class="hidden__item">
+                                                Багаторівневого та багатовимірного аналізу фінансових та облікових даних;
+                                            </li>
+                                             <li class="hidden__item">
+                                                Інтеграції із зовнішніми інформаційними системами;
+                                            </li>
+                                             <li class="hidden__item">
+                                                Використання типових форм первинного обліку на усіх ділянках обліку;
+                                            </li>
+                                             <li class="hidden__item">
+                                                Можливість грошового та кількісного обліку, ведення грошового обліку паралельно у різних валютах;
+                                            </li>
+                                             <li class="hidden__item">
+                                                Можливість ведення обліку за кількома планами рахунків;
+                                            </li>
+                                             <li class="hidden__item">
+                                                Можливість налаштування переліку аналітичних об`єктів, що використовуються в обліку, необмежена кількість аналітик.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                    <!-- end hidden -->
                     </div>
                 </div>
             </div>
@@ -254,11 +330,84 @@
                         <div class="product__btn">
                             <a href="" class="btn btn_green details_link">Детальніше</a>
                         </div>
-                        <div class="product__hidden">
-                            Ефективні рішення автоматизації бухгатерського обліку для державних установ і підприємств.
-                            Ефективні рішення автоматизації бухгатерського обліку для державних установ і підприємств.
-                            Ефективні рішення автоматизації бухгатерського обліку для державних установ і підприємств.
+                        <!-- hidden -->
+                        <div class="product__hidden bg2">
+                            <div class="container">
+                                <div class="hidden__close">
+                                    <img src="img/close.svg" alt="">
+                                </div>
+                                <div class="hidden__header clearfix">
+                                    <img src="img/logo.svg" class="hidden__pic" alt="">
+                                    <div class="hidden__el">Бухгалтерія</div>
+                                    <div class="hidden__t">Бюджет</div>
+
+                                </div>
+                                <div class="hidden__title">
+                                    Ефективне рішення для автоматизації бухгатерського обліку<br> в державних установах та підприємствах
+                                </div>
+                                <div class="clearfix">
+                                    <div class="hidden__left">
+                                        <div class="hidden__sub-t">
+                                            Загальний опис
+                                        </div>
+                                        <p class="hidden__txt">
+                                            <b>Система призначена</b> для комплексної автоматизації всіх розділів бухгалтерського та податкового обліку, оперативного обліку, управлінського обліку, аналізу та контролю фінансової діяльності підприємства; формування звітності у відповідності до законодавства, національних та міжнародних стандартів обліку; автоматизації процесів обліку персоналу, табельного обліку, розрахунку заробітної плати. 
+                                        </p>
+                                        <p class="hidden__txt">
+                                            <b>В cистемі реалізовано</b> концепцію ведення бухгалтерського, фінансового та управлінського обліку, що дозволяє одночасно отримувати повну оперативну інформацію з усіх аспектів господарської та фінансової діяльності підприємства та використовувати її для прийняття ефективних управлінських рішень.
+                                        </p>
+                                        <a href="" class="btn btn_red hidden__btn">Спробувати демо версію</a>
+
+                                        <div class="hidden__else">
+                                            Дивитись інші продукти:<br>
+                                            <b>А5 Бізнес,</b> А5 Мікробізнес
+                                        </div>
+
+                                    </div>
+                                    <div class="hidden__right">
+                                        <div class="hidden__sub-t">
+                                            Система надає користувачам можливості:
+                                        </div>
+                                        <ul class="list hidden__list">
+                                            <li class="hidden__item">
+                                                Внесення необхідної інформації користувачами Системи відповідно до наданих прав доступу в усіх підрозділах підприємства;
+                                            </li>
+                                            <li class="hidden__item">
+                                                Сумісного користування інформацією у різних робочих процесах;
+                                            </li>
+                                             <li class="hidden__item">
+                                                Надання захисту та гарантії збереження корпоративної інформації та широкі можливості керування доступу до неї;
+                                            </li>
+                                             <li class="hidden__item">
+                                                Iнтеграції з іншими інформаційними системами підприємства;
+                                            </li>
+                                             <li class="hidden__item">
+                                                Перелельного ведення податкового та бухгалтерського обліку;
+                                            </li>
+                                             <li class="hidden__item">
+                                                Багаторівневого та багатовимірного аналізу фінансових та облікових даних;
+                                            </li>
+                                             <li class="hidden__item">
+                                                Інтеграції із зовнішніми інформаційними системами;
+                                            </li>
+                                             <li class="hidden__item">
+                                                Використання типових форм первинного обліку на усіх ділянках обліку;
+                                            </li>
+                                             <li class="hidden__item">
+                                                Можливість грошового та кількісного обліку, ведення грошового обліку паралельно у різних валютах;
+                                            </li>
+                                             <li class="hidden__item">
+                                                Можливість ведення обліку за кількома планами рахунків;
+                                            </li>
+                                             <li class="hidden__item">
+                                                Можливість налаштування переліку аналітичних об`єктів, що використовуються в обліку, необмежена кількість аналітик.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                        <!-- end hidden -->
                     </div>
                 </div>
             </div>
@@ -274,17 +423,82 @@
                     </div>
                     <div class="product__main">
                         <div class="product__txt">
-                            Бухгвлтерія для фізичних осіб-підприэмців. Підтримка функціональності, звітності.
+                            Система призначена для автоматизації основних процесів ведення бізнесу малих підприємств та ФОП (мікробізнесу) з обротом 5-50 млн грн.
                         </div>
                         <div class="product__btn">
                             <a href="" class="btn btn_green details_link">Детальніше</a>
                         </div>
                     </div>
-                    <div class="product__hidden">
-                        Бухгвлтерія для фізичних осіб-підприэмців. Підтримка функціональності, звітності.
-                        Бухгвлтерія для фізичних осіб-підприэмців. Підтримка функціональності, звітності.
-                        Бухгвлтерія для фізичних осіб-підприэмців. Підтримка функціональності, звітності.
+                    <!-- hidden -->
+                    <div class="product__hidden bg3">
+                        <div class="container">
+                            <div class="hidden__close">
+                                <img src="img/close.svg" alt="">
+                            </div>
+                            <div class="hidden__header clearfix">
+                                <img src="img/logo.svg" class="hidden__pic" alt="">
+                                <div class="hidden__el">Бухгалтерія</div>
+                                <div class="hidden__t">Бізнес</div>
+
+                            </div>
+                            <div class="hidden__title">
+                                Рішення для автоматизація основних процесів ведення<br> бізнесу для підприємств з оборотом від 100 млн грн.
+                            </div>
+                            <div class="clearfix">
+                                <div class="hidden__left">
+                                    <div class="hidden__sub-t">
+                                        Загальний опис
+                                    </div>
+                                    <p class="hidden__txt">
+                                        <b>Система призначена</b> для комплексної автоматизації всіх розділів бухгалтерського та податкового обліку, оперативного обліку, управлінського обліку, аналізу та контролю фінансової діяльності підприємства; формування звітності у відповідності до законодавства, національних та міжнародних стандартів обліку; автоматизації процесів обліку персоналу, табельного обліку, розрахунку заробітної плати. 
+                                    </p>
+                                    <p class="hidden__txt">
+                                        <b>В cистемі реалізовано</b> концепцію ведення бухгалтерського, фінансового та управлінського обліку, що дозволяє одночасно отримувати повну оперативну інформацію з усіх аспектів господарської та фінансової діяльності підприємства та використовувати її для прийняття ефективних управлінських рішень.
+                                    </p>
+                                    <a href="" class="btn btn_yellow hidden__btn">Спробувати демо версію</a>
+
+                                    <div class="hidden__else">
+                                        Дивитись інші продукти:<br>
+                                        <b>А5 Бізнес,</b> А5 Бюджет
+                                    </div>
+
+                                </div>
+                                <div class="hidden__right">
+                                    <div class="hidden__sub-t">
+                                        Сервіс призначений для автоматизації бізнес-процесів торгових операцій, а саме:
+                                    </div>
+                                    <ul class="list hidden__list">
+                                        <li class="hidden__item">
+                                            Ведення залишків та руху товару по складах;
+                                        </li>
+                                        <li class="hidden__item">
+                                            Формування, прийому, обробки замовлень клієнта;
+                                        </li>
+                                        <li class="hidden__item">
+                                            Оформлення рахунків клієнтам;
+                                        </li>
+                                        <li class="hidden__item">
+                                            Формування послуг з постачання;
+                                        </li>
+                                        <li class="hidden__item">
+                                            Формування замовлення для постачальника;
+                                        </li>
+                                        <li class="hidden__item">
+                                            Отримання товару від постачальника та відправлення клієнту;
+                                        </li>
+                                        <li class="hidden__item">
+                                            Реєстрація продажу товару вроздріб;
+                                        </li>
+                                        <li class="hidden__item">
+                                            Контроль оплати товару.
+                                        </li>
+                                         
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    <!-- end hidden -->
                 </div>
             </div>
 
@@ -397,8 +611,8 @@
 
         <div class="clearfix">
             
-            <div class="col-4 col-lg-6 col-sm-12">
-                <div class="new new_left">
+            <div class="col-4 col-lg-6 col-sm-12 col-left">
+                <div class="new">
                     <img src="img/new1.jpg" class="new__pic" alt="">
                     <div class="new__main">
                         <div class="new__title">
@@ -414,8 +628,8 @@
                 </div>
             </div>
 
-            <div class="col-4 col-lg-6 col-sm-12">
-                <div class="new new_left">
+            <div class="col-4 col-lg-6 col-sm-12 col-center">
+                <div class="new">
                     <img src="img/new2.jpg" class="new__pic" alt="">
                     <div class="new__main">
                         <div class="new__title">
@@ -431,8 +645,8 @@
                 </div>
             </div>
 
-            <div class="col-4 col-lg-6 col-sm-12">
-                <div class="new new_left">
+            <div class="col-4 col-lg-6 col-sm-12 col-right">
+                <div class="new ">
                     <img src="img/new3.jpg" class="new__pic" alt="">
                     <div class="new__main">
                         <div class="new__title">
@@ -648,15 +862,15 @@
 <!-- modal -->
 
 <div class="modal" id="form-modal">
+     <div class="modal__close">
+        <img src="img/close.svg" alt="x">
+    </div>
     <div class="modal__inner">
 
         <div class="modal__header">
             <h2 class="title2 modal__title">
-                title
+                Залишити заявку
             </h2>
-            <div class="modal__close">
-                <img src="img/close.svg" alt="x">
-            </div>
         </div>
 
         <div class="modal__content">
@@ -668,19 +882,34 @@
                 <div class="form__field">
                     <input id="inp-name" class="form__input" name="name" type="text">
                     <label class="form__lbl" for="inp-name">
-                        Name
+                        *Ім'я та Прізвище
                     </label>
                 </div>
 
                 <div class="form__field">
-                    <input id="message" class="form__input" name="message" type="text" required="">
-                    <label class="form__lbl" for="message">
-                        Message*
+                    <input id="phone" class="form__input" name="phone" type="text" required="">
+                    <label class="form__lbl" for="phone">
+                        *Телефон
+                    </label>
+                </div>
+
+                <div class="form__field">
+                    <input id="email" class="form__input" name="email" type="email" required="">
+                    <label class="form__lbl" for="email">
+                        *Email
+                    </label>
+                </div>
+
+                <div class="form__field">
+                    <input id="company" class="form__input" name="company" type="text">
+                    <label class="form__lbl" for="company">
+                        Компания
                     </label>
                 </div>
 
                 <div class="modal__btn">
-                    <input class="btn btn_accent form__submit" type="submit" value="Send">
+                    <a class="btn btn_gray" href="">Відмінити</a>
+                    <input class="btn form__submit" type="submit" value="Залишити">
                 </div>
 
             </form>
@@ -690,9 +919,20 @@
 </div>
 
 <div class="modal" id="form-succes">
+    <div class="modal__close">
+        <img src="img/close.svg" alt="x">
+    </div>
     <div class="modal__inner">
         <div class="modal__content">
-            Thanks
+            <div class="thanks-pic">
+                <img src="img/check.svg" alt="">
+            </div>
+            <div class="thanks">
+                Дякуэмо
+            </div>
+            <h2 class="thanks2">
+               Ваша заявка відправлена!
+            </h2>
         </div>
     </div>
 </div>

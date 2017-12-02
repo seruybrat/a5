@@ -18,13 +18,20 @@
         z-index: -1
 
     &__item
+        filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0)
         opacity: 0
         transition: opacity .6s ease
+        .looper
+            filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0)
+            opacity: 0
         &.active
             opacity: 1
 
             .slider__main
                 z-index: 1
+            .looper
+                filter: progid:DXImageTransform.Microsoft.Alpha(opacity=1)
+                opacity: 1
 
     .title2
         margin-bottom: 20px
